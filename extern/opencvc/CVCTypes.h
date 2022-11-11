@@ -1,0 +1,155 @@
+//
+//  CVCTypes.h
+//  OpenCV-C
+//
+//  Created by Gerrit Goossen on 5/13/21.
+//  Copyright (c) 2021 Gamma Ray Digital, Inc. All rights reserved.
+//
+
+#ifndef CVCTYPES_H
+#define CVCTYPES_H
+
+#include <stdint.h>
+
+#ifdef _WIN32
+   #ifdef __cplusplus
+      #define CVC_EXPORT extern "C" __declspec(dllexport)
+   #else
+      #define CVC_EXPORT __declspec(dllexport)
+   #endif // __cplusplus
+#else
+   #ifdef __cplusplus
+      #define CVC_EXPORT extern "C"
+   #else
+      #define CVC_EXPORT
+   #endif // __cplusplus
+#endif // _WIN32
+
+// Rect
+typedef void* CVCRect;
+
+CVC_EXPORT CVCRect CVCRectCreate(int x, int y, int width, int height);
+CVC_EXPORT void CVCRectFree(CVCRect size);
+CVC_EXPORT int CVCRectX(CVCRect size);
+CVC_EXPORT int CVCRectY(CVCRect size);
+CVC_EXPORT int CVCRectWidth(CVCRect size);
+CVC_EXPORT int CVCRectHeight(CVCRect size);
+CVC_EXPORT int CVCRectArea(CVCRect size);
+CVC_EXPORT bool CVCRectEmpty(CVCRect size);
+
+// Mat
+typedef void*	CVCMat;
+
+CVC_EXPORT CVCMat CVCMatCreate(void);
+CVC_EXPORT CVCMat CVCMatCreateWithSize(int nrow, int ncol, int cvtype, char* data = 0);
+CVC_EXPORT void CVCMatCreateData(CVCMat mat, int nrow, int ncol, int cvtype);
+CVC_EXPORT void CVCMatCopyFrom(CVCMat mat, char* data);
+
+CVC_EXPORT void CVCMatFree(CVCMat mat);
+CVC_EXPORT int CVCMatHeight(CVCMat mat);
+CVC_EXPORT int CVCMatWidth(CVCMat mat);
+CVC_EXPORT CVCMat CVCMatRoi(CVCMat mat, CVCRect rect);
+
+CVC_EXPORT char* CVCMatGetData(CVCMat mat);
+CVC_EXPORT char* CVCMatAt(CVCMat mat, int nbyte_per_pixel, int i, int j);
+CVC_EXPORT char* CVCMatAtChar(CVCMat mat, int i, int j);
+CVC_EXPORT float* CVCMatAtFloat(CVCMat mat, int i, int j);
+CVC_EXPORT int* CVCMatAtInt(CVCMat mat, int i, int j);
+CVC_EXPORT char* CVCMatAtVec3b(CVCMat mat, int i, int j);
+CVC_EXPORT float* CVCMatAtVec3f(CVCMat mat, int i, int j);
+CVC_EXPORT void CVCMatSetInt(CVCMat mat, int i, int j, int data);
+CVC_EXPORT void CVCMatSetChar(CVCMat mat, int i, int j, char data);
+CVC_EXPORT void CVCMatSetFloat(CVCMat mat, int i, int j, float data);
+CVC_EXPORT void CVCMatSetVec3b(CVCMat mat, int i, int j, char* data);
+CVC_EXPORT void CVCMatSetVec3f(CVCMat mat, int i, int j, float* data);
+
+CVC_EXPORT int64_t CVCMatGetByteCount(CVCMat mat);
+CVC_EXPORT int CVCMatGetType(CVCMat mat);
+
+// Vector of Mat
+typedef void* CVCMatVector;
+
+CVC_EXPORT CVCMatVector CVCMatVectorCreate(void);
+CVC_EXPORT void CVCMatVectorFree(CVCMatVector matVector);
+CVC_EXPORT size_t CVCMatVectorSize(CVCMatVector matVector);
+CVC_EXPORT CVCMat CVCMatVectorAt(CVCMatVector matVector, size_t index);
+CVC_EXPORT void CVCMatVectorPushBack(CVCMatVector matVector, CVCMat mat);
+
+// Point
+typedef struct CVCPoint {
+	int x, y;
+} CVCPoint;
+
+typedef struct CVCPoint2f {
+	float x, y;
+} CVCPoint2f;
+
+// Scalar
+typedef struct CVCScalar {
+	double v0, v1, v2, v3;
+} CVCScalar;
+
+// Size
+typedef void* CVCSize;
+
+CVC_EXPORT CVCSize CVCSizeCreate(int width, int height);
+CVC_EXPORT void CVCSizeFree(CVCSize size);
+CVC_EXPORT int CVCSizeWidth(CVCSize size);
+CVC_EXPORT int CVCSizeHeight(CVCSize size);
+CVC_EXPORT double CVCSizeAspectRatio(CVCSize size);
+CVC_EXPORT int CVCSizeArea(CVCSize size);
+CVC_EXPORT bool CVCSizeEmpty(CVCSize size);
+
+// Vector of Rect
+typedef void* CVCRectVector;
+
+CVC_EXPORT CVCRectVector CVCRectVectorCreate(void);
+CVC_EXPORT void CVCRectVectorFree(CVCRectVector rectVector);
+CVC_EXPORT size_t CVCRectVectorSize(CVCRectVector rectVector);
+CVC_EXPORT CVCRect CVCRectVectorAt(CVCRectVector rectVector, size_t index);
+CVC_EXPORT void CVCRectVectorPushBack(CVCRectVector rectVector, CVCRect rect);
+
+// Vector of int
+typedef void* CVCIntVector;
+
+CVC_EXPORT CVCIntVector CVCIntVectorCreate(void);
+CVC_EXPORT void CVCIntVectorFree(CVCIntVector intVector);
+CVC_EXPORT size_t CVCIntVectorSize(CVCIntVector intVector);
+CVC_EXPORT int CVCIntVectorAt(CVCIntVector intVector, size_t index);
+CVC_EXPORT void CVCIntVectorPushBack(CVCIntVector intVector, int i);
+CVC_EXPORT int * CVCIntVectorData(CVCIntVector intVector);
+
+// Vector of float
+typedef void* CVCFloatVector;
+
+CVC_EXPORT CVCFloatVector CVCFloatVectorCreate(void);
+CVC_EXPORT void CVCFloatVectorFree(CVCFloatVector floatVector);
+CVC_EXPORT size_t CVCFloatVectorSize(CVCFloatVector floatVector);
+CVC_EXPORT float CVCFloatVectorAt(CVCFloatVector floatVector, size_t index);
+CVC_EXPORT void CVCFloatVectorPushBack(CVCFloatVector floatVector, float f);
+CVC_EXPORT float * CVCFloatVectorData(CVCFloatVector floatVector);
+
+// Vector of unsigned char
+typedef void* CVCUCharVector;
+
+CVC_EXPORT CVCUCharVector CVCUCharVectorCreate(void);
+CVC_EXPORT void CVCUCharVectorFree(CVCUCharVector ucharVector);
+CVC_EXPORT size_t CVCUCharVectorSize(CVCUCharVector ucharVector);
+CVC_EXPORT unsigned char CVCUCharVectorAt(CVCUCharVector ucharVector, size_t index);
+CVC_EXPORT void CVCUCharVectorPushBack(CVCUCharVector ucharVector, unsigned char c);
+CVC_EXPORT unsigned char * CVCUCharVectorData(CVCUCharVector ucharVector);
+
+// TermCriteria
+typedef void* CVCTermCriteria;
+
+enum CVCTermCriteriaType {
+   CVC_COUNT=1,
+   CVC_MAX_ITER=CVC_COUNT,
+   CVC_EPS=2
+};
+
+CVC_EXPORT CVCTermCriteria CVCTermCriteriaCreate(int type, int maxCount, double epsilon);
+CVC_EXPORT void CVCTermCriteriaFree(CVCTermCriteria);
+CVC_EXPORT bool CVCTermCriteriaIsValid(CVCTermCriteria termCriteria);
+
+#endif /* CVCTYPES_H */

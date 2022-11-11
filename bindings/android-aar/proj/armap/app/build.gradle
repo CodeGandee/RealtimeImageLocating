@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.intellif.armap'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.intellif.armap"
+        minSdk 22
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions{
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_calib3d.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_core.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_dnn.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_features2d.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_flann.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_gapi.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_imgcodecs.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_imgproc.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_java4.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_ml.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_objdetect.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_photo.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_stitching.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_video.so'
+//        pickFirst 'opencvsdk/native/libs/x86_64/libopencv_videoio.so'
+//
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_calib3d.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_core.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_dnn.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_features2d.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_flann.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_gapi.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_imgcodecs.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_imgproc.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_java4.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_ml.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_objdetect.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_photo.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_stitching.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_video.so'
+//        pickFirst 'opencvsdk/native/libs/arm64-v8a/libopencv_videoio.so'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(path: ':overmap')
+    implementation project(path: ':opencvsdk')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'net.java.dev.jna:jna:5.12.1@aar'
+    implementation group: 'commons-io', name: 'commons-io', version: '20030203.000550'
+}

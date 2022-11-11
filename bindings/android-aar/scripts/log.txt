@@ -1,0 +1,38 @@
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set NDK_TOOLCHAIN=d:/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set ANDROID_SDK_ROOT=D:/Android/sdk 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set ANDROID_PLATFORM=22 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set ANDROID_ABI=x86_64 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set CURRENT_DIR="D:\code\ImageRegionSearch\bindings\android-aar\scripts" 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set _OpenCV_DIR="D:\code\ImageRegionSearch\bindings\android-aar\scripts"/build-ocv-android-x86_64/install/sdk/native/jni 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set BOOST_ROOT=D:/libs/source/boost_1_77_0 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set SOURCE_ROOT_DIR=../../../ 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set BUILD_DIR=build-jnilib-x86_64 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>set INSTALL_DIR=build-jnilib-x86_64/install 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>if exist build-jnilib-x86_64 rmdir build-jnilib-x86_64 /s /q 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>mkdir build-jnilib-x86_64 
+
+D:\code\ImageRegionSearch\bindings\android-aar\scripts>cmake -S ../../../ -B build-jnilib-x86_64 -G Ninja    -DCMAKE_FIND_DEBUG_MODE=ON    -DOpenCV_DIR="D:\code\ImageRegionSearch\bindings\android-aar\scripts"/build-ocv-android-x86_64/install/sdk/native/jni    -DBOOST_ROOT=D:/libs/source/boost_1_77_0    -DCMAKE_INSTALL_PREFIX=build-jnilib-x86_64/install    -DCMAKE_TOOLCHAIN_FILE=d:/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake    -DANDROID_PLATFORM=22    -DANDROID_ABI=x86_64    -DBUILD_APPS=OFF     -DBUILD_C_INTERFACE=ON 
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: D:/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: D:/code/ImageRegionSearch/bindings/android-aar/scripts/build-ocv-android-x86_64/install (found version "4.6.0") 
+Terminate batch job (Y/N)? 
