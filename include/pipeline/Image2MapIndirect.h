@@ -55,7 +55,7 @@ namespace pipeline{
                 m_match_confidence = -1;
                 m_transform = cv::Mat();
                 m_is_ready = false;
-                m_transform = cv::Mat::eye({ 3,3 }, CV_32FC1);
+                //m_transform = cv::Mat::eye({ 3,3 }, CV_32FC1);
             }
         };
     public:
@@ -81,6 +81,7 @@ namespace pipeline{
         void do_query_image_keypoint_detection();
         void do_query_image_feature_extraction();
         bool is_query_image_ready() const; //true if we have a query image and it it preprocessed
+        void clear_query_image();
 
         bool do_match_image2map();  //return true if success
         bool do_match_image2map_indirect();
@@ -149,6 +150,7 @@ namespace pipeline{
         std::mutex m_lock_direct_match;
         std::mutex m_orb_matcher_lock;
         std::mutex m_sift_matcher_lock;
+        std::mutex m_transformer_lock;
 
         //ImageMatchData m_ref_image_with_matrix;
         bool m_map_ready = false;

@@ -132,6 +132,11 @@ namespace imgregionloc {
 		{
 			return m_query_image.m_is_ready;
 		}
+		void Image2MapIndirect::clear_query_image()
+		{
+			m_query_image.reset();
+		}
+
 		bool Image2MapIndirect::do_match_image2map()
 		{
 			std::lock_guard<std::mutex> lock(m_lock_direct_match);
@@ -164,6 +169,11 @@ namespace imgregionloc {
 				m_lock_ref_image.unlock();
 				m_lock_ref_image_to_match.unlock();
 				m_sift_matcher_lock.unlock();
+				if (m_query_image.m_transform.empty())
+				{
+					std::lock_guard<std::mutex> lock(m_transformer_lock);
+					m_transformer->init_matrix_and_size(m_ref_image.m_transform, m_image_width, m_image_height, m_map_width, m_map_height);
+				}
 				return true;
 			}
 			else
@@ -189,7 +199,7 @@ namespace imgregionloc {
 					m_orb_matcher->process_match();
 				}
 				cv::Mat perspective_transform_matrix;
-				std::lock(m_lock_ref_image, m_lock_query_image, m_orb_matcher_lock);
+				std::lock(m_lock_ref_image, m_lock_query_image, m_orb_matcher_lock, m_transformer_lock);
 				m_orb_matcher->get_perspective_transform_matrix(perspective_transform_matrix);
 				if (perspective_transform_matrix.empty() || m_ref_image.m_transform.empty())
 				{
@@ -201,6 +211,7 @@ namespace imgregionloc {
 				m_lock_ref_image.unlock();
 				m_lock_query_image.unlock();
 				m_orb_matcher_lock.unlock();
+				m_transformer_lock.unlock();
 				return true;
 			}
 			else
@@ -256,6 +267,7 @@ namespace imgregionloc {
 				std::lock_guard<std::mutex> lock(m_lock_query_image);
 				m_query_image.m_orb->get_image(img_ori);
 			}
+			std::lock_guard<std::mutex> lock(m_transformer_lock);
 			m_transformer->img_region_to_map(img_ori, img_new);
 			Polygon2 map_region_polygon;
 			float top_left_x(m_map_width), top_left_y(m_map_height), bottom_right_x(0), bottom_right_y(0);

@@ -28,6 +28,7 @@ extern "C" {
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_query_image_keypoints(IMGRGLOC_Image2MapIndirect* obj, CVCMat out_pts);
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_is_query_image_ready(IMGRGLOC_Image2MapIndirect* obj, bool* out_is_ready);
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_do_match_image2map(IMGRGLOC_Image2MapIndirect* obj, bool* out_is_success);
+    IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_clear_query_image(IMGRGLOC_Image2MapIndirect* obj);
     
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_transform_matrix(IMGRGLOC_Image2MapIndirect* obj, CVCMat out_transform_matrix);
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_match_confidence(IMGRGLOC_Image2MapIndirect* obj, float* out_confidence);
@@ -48,6 +49,10 @@ extern "C" {
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_set_map_maxlen(IMGRGLOC_Image2MapIndirect* obj, int value);
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_set_ref_image_maxlen(IMGRGLOC_Image2MapIndirect* obj, int value);
     IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_set_query_image_maxlen(IMGRGLOC_Image2MapIndirect* obj, int value);
+
+    IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_map_image(IMGRGLOC_Image2MapIndirect* obj, CVCMat img);
+    IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_ref_image(IMGRGLOC_Image2MapIndirect* obj, CVCMat img);
+    IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_query_image(IMGRGLOC_Image2MapIndirect* obj, CVCMat img);
 
     const char* IMGRGLOC_Image2MapIndirect_get_version();
 }

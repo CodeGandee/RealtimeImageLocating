@@ -11,7 +11,7 @@ import com.sun.jna.ptr.PointerByReference;
 
 public class Image2MapIndirect implements AutoCloseable{
     static{
-        Native.register(Image2Map.class, "imgregionloc_c");
+        Native.register(Image2MapIndirect.class, "imgregionloc_c");
     }
 
     public Image2MapIndirect(){

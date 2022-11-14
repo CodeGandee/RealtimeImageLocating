@@ -161,6 +161,13 @@ IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_do_match_image2map(IMGRGLOC_Image2
 	return IMGRGLOC_ERR_NONE;
 }
 
+IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_clear_query_image(IMGRGLOC_Image2MapIndirect* obj)
+{
+	auto p = (Image2MapIndirect*)obj;
+	p->clear_query_image();
+	return IMGRGLOC_ERR_NONE;
+}
+
 IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_transform_matrix(IMGRGLOC_Image2MapIndirect* obj, CVCMat out_transform_matrix)
 {
 	auto& _transform_matrix = *(cv::Mat*)out_transform_matrix;
@@ -358,6 +365,30 @@ IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_set_query_image_maxlen(IMGRGLOC_Im
 {
 	auto p = (Image2MapIndirect*)obj;
 	p->set_query_image_maxlen(value);
+	return IMGRGLOC_ERR_NONE;
+}
+
+IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_map_image(IMGRGLOC_Image2MapIndirect* obj, CVCMat img)
+{
+	auto p = (Image2MapIndirect*)obj;
+	auto& _img = *(cv::Mat*)img;
+	_img = p->get_map_img();
+	return IMGRGLOC_ERR_NONE;
+}
+
+IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_ref_image(IMGRGLOC_Image2MapIndirect* obj, CVCMat img)
+{
+	auto p = (Image2MapIndirect*)obj;
+	auto& _img = *(cv::Mat*)img;
+	_img = p->get_ref2map_img();
+	return IMGRGLOC_ERR_NONE;
+}
+
+IMGRGLOC_ErrorCode IMGRGLOC_Image2MapIndirect_get_query_image(IMGRGLOC_Image2MapIndirect* obj, CVCMat img)
+{
+	auto p = (Image2MapIndirect*)obj;
+	auto& _img = *(cv::Mat*)img;
+	_img = p->get_query_img();
 	return IMGRGLOC_ERR_NONE;
 }
 
