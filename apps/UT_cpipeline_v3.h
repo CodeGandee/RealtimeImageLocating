@@ -27,7 +27,7 @@ static double timer()
 
 int main() {
     string map_file = "E:/projects/MapMatching/data/map_lq/map.jpg";
-    string video_file = "E:/projects/MapMatching/data/map_lq/test_imgs/video.mp4";
+    string video_file = "E:/projects/MapMatching/data/map_lq/test_imgs/video4.mp4";
     Mat cv_map = imread(map_file, IMREAD_COLOR);
     resize(cv_map, cv_map, Size(), 0.8, 0.8);
 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\projects\ImageRegionLocalization\dev\linzhi\CMakeFiles\0fad45ac14713996b0e811d4661f50ae\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6147616F-272A-3B2C-A40D-B0AB77CE95CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

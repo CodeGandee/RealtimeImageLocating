@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\SIFTFeatureExtractor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\ORBFeatureExtractor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\ImageWithFeature.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\FeaturePointList.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\SIFTRegionMatcher.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\ORBRegionMatcher.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\RegionTransformer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\pipeline\Image2MapBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\pipeline\Image2MapDirect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\pipeline\Image2MapIndirect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\src\testlib.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\SIFTFeatureExtractor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\ORBFeatureExtractor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\ImageWithFeature.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\FeaturePointList.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\SIFTRegionMatcher.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\ORBRegionMatcher.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\RegionTransformer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\testlib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\imgregionloc_master.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\pipeline\Image2MapBase.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\pipeline\Image2MapDirect.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\include\pipeline\Image2MapIndirect.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\projects\ImageRegionLocalization\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{35CAF0B7-D7DB-3AF8-BF79-EBFCD6C9FF14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{32454E39-26BD-309A-8EE4-6825C085CB5A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

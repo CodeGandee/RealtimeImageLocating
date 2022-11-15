@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1CC3D59A-FC76-3750-845C-E31177CCBB5E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>c_api_test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c_api_test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c_api_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <LocalDebuggerEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PATH=$(PATH);E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\bin</LocalDebuggerEnvironment>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">c_api_test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">c_api_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <LocalDebuggerEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PATH=$(PATH);E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\bin</LocalDebuggerEnvironment>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">c_api_test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">c_api_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <LocalDebuggerEnvironment Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">PATH=$(PATH);E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\bin</LocalDebuggerEnvironment>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">c_api_test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">c_api_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <LocalDebuggerEnvironment Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">PATH=$(PATH);E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\bin</LocalDebuggerEnvironment>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/wheels/opencv/opencv-4.6.0/install/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\bindings\c\Debug\imgregionloc_c.lib;..\src\Debug\imgregionloc.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_gapi460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stitching460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_alphamat460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_aruco460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_barcode460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bgsegm460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bioinspired460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ccalib460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_objdetect460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_superres460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dpm460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_face460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_fuzzy460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_hfs460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_img_hash460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_intensity_transform460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_line_descriptor460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_mcc460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_quality460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rapid460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_reg460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rgbd460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_saliency460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stereo460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_structured_light460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_phase_unwrapping460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_superres460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_optflow460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_surface_matching460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_tracking460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_highgui460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_datasets460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_plot460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_text460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videostab460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videoio460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_wechat_qrcode460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xfeatures2d460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ml460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_shape460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ximgproc460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_video460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xobjdetect460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgcodecs460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_objdetect460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_calib3d460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_features2d460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_flann460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xphoto460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_photo460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgproc460d.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_core460d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/projects/ImageRegionLocalization/dev/linzhi/apps/Debug/c_api_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/projects/ImageRegionLocalization/dev/linzhi/bin/Debug/c_api_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/wheels/opencv/opencv-4.6.0/install/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\bindings\c\Release\imgregionloc_c.lib;..\src\Release\imgregionloc.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_gapi460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stitching460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_alphamat460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_aruco460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_barcode460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bgsegm460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bioinspired460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ccalib460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_objdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_superres460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dpm460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_face460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_fuzzy460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_hfs460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_img_hash460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_intensity_transform460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_line_descriptor460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_mcc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_quality460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rapid460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_reg460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rgbd460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_saliency460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stereo460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_structured_light460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_phase_unwrapping460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_superres460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_optflow460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_surface_matching460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_tracking460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_highgui460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_datasets460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_plot460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_text460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videostab460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videoio460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_wechat_qrcode460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xfeatures2d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ml460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_shape460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ximgproc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_video460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xobjdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgcodecs460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_objdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_calib3d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_features2d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_flann460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xphoto460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_photo460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgproc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_core460.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/projects/ImageRegionLocalization/dev/linzhi/apps/Release/c_api_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/projects/ImageRegionLocalization/dev/linzhi/bin/Release/c_api_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/wheels/opencv/opencv-4.6.0/install/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\bindings\c\MinSizeRel\imgregionloc_c.lib;..\src\MinSizeRel\imgregionloc.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_gapi460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stitching460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_alphamat460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_aruco460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_barcode460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bgsegm460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bioinspired460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ccalib460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_objdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_superres460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dpm460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_face460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_fuzzy460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_hfs460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_img_hash460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_intensity_transform460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_line_descriptor460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_mcc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_quality460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rapid460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_reg460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rgbd460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_saliency460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stereo460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_structured_light460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_phase_unwrapping460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_superres460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_optflow460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_surface_matching460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_tracking460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_highgui460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_datasets460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_plot460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_text460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videostab460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videoio460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_wechat_qrcode460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xfeatures2d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ml460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_shape460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ximgproc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_video460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xobjdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgcodecs460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_objdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_calib3d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_features2d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_flann460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xphoto460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_photo460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgproc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_core460.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/projects/ImageRegionLocalization/dev/linzhi/apps/MinSizeRel/c_api_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/projects/ImageRegionLocalization/dev/linzhi/bin/MinSizeRel/c_api_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/wheels/opencv/opencv-4.6.0/install/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\projects\ImageRegionLocalization\include;E:\projects\ImageRegionLocalization\extern;E:\projects\ImageRegionLocalization\bindings\c\include;E:\wheels\boost_1_80_0;E:\wheels\opencv\opencv-4.6.0\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\bindings\c\RelWithDebInfo\imgregionloc_c.lib;..\src\RelWithDebInfo\imgregionloc.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_gapi460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stitching460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_alphamat460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_aruco460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_barcode460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bgsegm460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_bioinspired460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ccalib460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_objdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn_superres460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dpm460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_face460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_fuzzy460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_hfs460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_img_hash460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_intensity_transform460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_line_descriptor460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_mcc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_quality460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rapid460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_reg460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_rgbd460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_saliency460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_stereo460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_structured_light460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_phase_unwrapping460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_superres460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_optflow460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_surface_matching460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_tracking460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_highgui460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_datasets460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_plot460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_text460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videostab460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_videoio460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_wechat_qrcode460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xfeatures2d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ml460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_shape460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_ximgproc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_video460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xobjdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgcodecs460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_objdetect460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_calib3d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_dnn460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_features2d460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_flann460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_xphoto460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_photo460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_imgproc460.lib;E:\wheels\opencv\opencv-4.6.0\install\x64\vc16\lib\opencv_core460.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/projects/ImageRegionLocalization/dev/linzhi/apps/RelWithDebInfo/c_api_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/projects/ImageRegionLocalization/dev/linzhi/bin/RelWithDebInfo/c_api_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\projects\ImageRegionLocalization\apps\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/projects/ImageRegionLocalization/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/projects/ImageRegionLocalization -BE:/projects/ImageRegionLocalization/dev/linzhi --check-stamp-file E:/projects/ImageRegionLocalization/dev/linzhi/apps/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/projects/ImageRegionLocalization/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/projects/ImageRegionLocalization -BE:/projects/ImageRegionLocalization/dev/linzhi --check-stamp-file E:/projects/ImageRegionLocalization/dev/linzhi/apps/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/projects/ImageRegionLocalization/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/projects/ImageRegionLocalization -BE:/projects/ImageRegionLocalization/dev/linzhi --check-stamp-file E:/projects/ImageRegionLocalization/dev/linzhi/apps/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/projects/ImageRegionLocalization/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/projects/ImageRegionLocalization -BE:/projects/ImageRegionLocalization/dev/linzhi --check-stamp-file E:/projects/ImageRegionLocalization/dev/linzhi/apps/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\projects\ImageRegionLocalization\dev\linzhi\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\apps\c_api_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\projects\ImageRegionLocalization\dev\linzhi\ZERO_CHECK.vcxproj">
+      <Project>{6DB7FD79-B20E-3A04-8180-1511E135747E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\projects\ImageRegionLocalization\dev\linzhi\src\imgregionloc.vcxproj">
+      <Project>{190C733A-EF01-37BA-83FE-5277F469F414}</Project>
+      <Name>imgregionloc</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\projects\ImageRegionLocalization\dev\linzhi\bindings\c\imgregionloc_c.vcxproj">
+      <Project>{82599978-C665-35A0-8687-ECC44E790461}</Project>
+      <Name>imgregionloc_c</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

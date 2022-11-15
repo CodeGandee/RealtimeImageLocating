@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\bindings\c\src\IMGRGLOC_Image2Map.cpp">
+      <Filter>c_src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\bindings\c\src\IMGRGLOC_Image2MapIndirect.cpp">
+      <Filter>c_src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\bindings\c\src\IMGRGLOC_Test.cpp">
+      <Filter>c_src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCTypes.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCCore.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCImgCodecs.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCImgProc.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCObjectDetect.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCPhoto.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCStitching.cpp">
+      <Filter>opencvc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\bindings\c\include\IMGRGLOC_master.h">
+      <Filter>c_include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\bindings\c\include\IMGRGLOC_Image2Map.h">
+      <Filter>c_include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\bindings\c\include\IMGRGLOC_Image2MapIndirect.h">
+      <Filter>c_include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\bindings\c\include\IMGRGLOC_Test.h">
+      <Filter>c_include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCTypes.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCBase.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCCore.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCImgCodecs.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCImgProc.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCObjectDetect.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCPhoto.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCPrivate.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\projects\ImageRegionLocalization\extern\opencvc\CVCStitching.h">
+      <Filter>opencvc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\projects\ImageRegionLocalization\bindings\c\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="c_include">
+      <UniqueIdentifier>{F2766394-A5E2-3B2D-935A-55D1EE1A8C53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c_src">
+      <UniqueIdentifier>{2EDFFCE0-6E86-34C3-9744-2A84B27E9CA3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opencvc">
+      <UniqueIdentifier>{8D83FBAB-E80A-3410-A60C-4571A3814A2D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -23,6 +23,7 @@ namespace imgregionloc {
 		void set_feature(const cv::Mat& input_desc);
 		void get_image(cv::Mat& image) const;
 		void get_feature_point_list(FeaturePointListPtr& feature_point_list) const;
+		FeaturePointListPtr get_feature_point_list() const;
 		void set_matched(bool flag);
 		bool check_matched();
 		bool check_ready();

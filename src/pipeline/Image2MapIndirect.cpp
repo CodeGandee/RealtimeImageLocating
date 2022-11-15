@@ -93,12 +93,23 @@ namespace imgregionloc {
 			img.m_is_ready = true;
 
 		}
+		bool Image2MapIndirect::is_ref_image2query_ready() const
+		{
+			return m_ref_image_to_match.m_is_ready;
+		}
+		bool Image2MapIndirect::is_ref_image2map_ready()
+		{
+			std::lock_guard<std::mutex> lock(m_lock_ref_image_to_match);
+			return m_ref_image_to_match.m_is_ready;
+		}
 		bool Image2MapIndirect::is_ref_image2map_ready() const
 		{
 			return m_ref_image_to_match.m_is_ready;
 		}
-		bool Image2MapIndirect::is_ref_image2query_ready() const
+
+		bool Image2MapIndirect::is_ref_image2query_ready()
 		{
+			std::lock_guard<std::mutex> lock(m_lock_ref_image);
 			return m_ref_image.m_is_ready;
 		}
 		void Image2MapIndirect::set_query_image(const cv::Mat& img)
@@ -130,6 +141,11 @@ namespace imgregionloc {
 
 		bool Image2MapIndirect::is_query_image_ready() const
 		{
+			return m_query_image.m_is_ready;
+		}
+		bool Image2MapIndirect::is_query_image_ready()
+		{
+			std::lock_guard<std::mutex> lock(m_lock_query_image);
 			return m_query_image.m_is_ready;
 		}
 		void Image2MapIndirect::clear_query_image()
@@ -203,11 +219,15 @@ namespace imgregionloc {
 				m_orb_matcher->get_perspective_transform_matrix(perspective_transform_matrix);
 				if (perspective_transform_matrix.empty() || m_ref_image.m_transform.empty())
 				{
+					m_lock_ref_image.unlock();
+					m_lock_query_image.unlock();
+					m_orb_matcher_lock.unlock();
+					m_transformer_lock.unlock();
 					return false;
 				}
 				perspective_transform_matrix.copyTo(m_query_image.m_transform);
 				m_orb_matcher->get_confidence(m_query_image.m_match_confidence);
-				m_transformer->init_matrix_and_size(m_query_image.m_transform * m_ref_image.m_transform, m_image_width, m_image_height, m_map_width, m_map_height);
+				m_transformer->init_matrix_and_size(m_ref_image.m_transform*m_query_image.m_transform, m_image_width, m_image_height, m_map_width, m_map_height);
 				m_lock_ref_image.unlock();
 				m_lock_query_image.unlock();
 				m_orb_matcher_lock.unlock();
@@ -223,17 +243,57 @@ namespace imgregionloc {
 		{
 			return m_query_image.m_match_confidence * m_ref_image.m_match_confidence;
 		}
+
+		float Image2MapIndirect::get_match_confidence()
+		{
+			std::lock(m_lock_ref_image, m_lock_query_image);
+			return m_query_image.m_match_confidence * m_ref_image.m_match_confidence;
+			m_lock_query_image.unlock();
+			m_lock_ref_image.unlock();
+		}
+
 		cv::Mat Image2MapIndirect::get_transform_matrix() const
 		{
+			return m_transformer->get_perspective_transform_matrix();
+		}
+		cv::Mat Image2MapIndirect::get_transform_matrix()
+		{
+			std::lock_guard<std::mutex> lock(m_transformer_lock);
 			return m_transformer->get_perspective_transform_matrix();
 		}
 
 		void Image2MapIndirect::get_matched_points_in_map(PointList2& out) const
 		{
+			vector<KeyPoint> kps;
+			m_map->get_feature_point_list()->get_kps(kps);
+			out = vector<Point2>(kps.size());
+			for (size_t i = 0; i < kps.size(); i++)
+			{
+				out[i] = kps[i].pt;
+			}
 		}
 
 		void Image2MapIndirect::get_matched_points_in_image(PointList2& out) const
 		{
+			vector<KeyPoint> kps;
+			m_query_image.m_orb->get_feature_point_list()->get_kps(kps);
+			out = vector<Point2>(kps.size());
+			for (size_t i = 0; i < kps.size(); i++)
+			{
+				out[i] = kps[i].pt;
+			}
+		}
+
+		void Image2MapIndirect::get_matched_points_in_image(PointList2& out)
+		{
+			vector<KeyPoint> kps;
+			std::lock_guard<std::mutex> lock(m_lock_query_image);
+			m_query_image.m_orb->get_feature_point_list()->get_kps(kps);
+			out = vector<Point2>(kps.size());
+			for (size_t i = 0; i < kps.size(); i++)
+			{
+				out[i] = kps[i].pt;
+			}
 		}
 
 		Point2 Image2MapIndirect::transform_point_image2map(const Point2& p) const
@@ -244,8 +304,22 @@ namespace imgregionloc {
 			m_transformer->points_region_to_map(src, out);
 			return out[0];
 		}
+		Point2 Image2MapIndirect::transform_point_image2map(const Point2& p)
+		{
+			vector<Point2> src(1);
+			vector<Point2> out(1);
+			src[0] = p;
+			std::lock_guard<std::mutex> lock(m_transformer_lock);
+			m_transformer->points_region_to_map(src, out);
+			return out[0];
+		}
 		void Image2MapIndirect::transform_point_image2map(const std::vector<Point2>& pts, std::vector<Point2>& out) const
 		{
+			m_transformer->points_region_to_map(pts, out);
+		}
+		void Image2MapIndirect::transform_point_image2map(const std::vector<Point2>& pts, std::vector<Point2>& out)
+		{
+			std::lock_guard<std::mutex> lock(m_transformer_lock);
 			m_transformer->points_region_to_map(pts, out);
 		}
 		Point2 Image2MapIndirect::transform_point_map2image(const Point2& p) const
@@ -256,8 +330,22 @@ namespace imgregionloc {
 			m_transformer->points_map_to_region(src, out);
 			return out[0];
 		}
+		Point2 Image2MapIndirect::transform_point_map2image(const Point2& p)
+		{
+			std::lock_guard<std::mutex> lock(m_transformer_lock);
+			vector<Point2> src(1);
+			vector<Point2> out(1);
+			src[0] = p;
+			m_transformer->points_map_to_region(src, out);
+			return out[0];
+		}
 		void Image2MapIndirect::transform_point_map2image(const std::vector<Point2>& pts, std::vector<Point2>& out) const
 		{
+			m_transformer->points_map_to_region(pts, out);
+		}
+		void Image2MapIndirect::transform_point_map2image(const std::vector<Point2>& pts, std::vector<Point2>& out)
+		{
+			std::lock_guard<std::mutex> lock(m_transformer_lock);
 			m_transformer->points_map_to_region(pts, out);
 		}
 		void Image2MapIndirect::get_transformed_image_in_map(cv::Mat& out, Point2& upper_left_point, cv::Mat* out_mask)
@@ -310,6 +398,7 @@ namespace imgregionloc {
 			transform_point_map2image(map_region, out);
 
 		}
+
 		void Image2MapIndirect::get_map_region_wrt_map(Polygon2& out) const
 		{
 			Polygon2 image_corners(5), polygon_out;

@@ -36,6 +36,7 @@ int directMatch(IMGRGLOC_Image2MapIndirect* image2map_pipe,  VideoCapture* cap)
         {
             std::lock_guard<std::mutex> lock(cap_lock);
             cap->read(frame);
+            //rotate(frame, frame, ROTATE_180);
             if (frame.empty()) {
                 return 0;
             }
@@ -54,12 +55,15 @@ int directMatch(IMGRGLOC_Image2MapIndirect* image2map_pipe,  VideoCapture* cap)
 
 int indirectMatchAndShow(IMGRGLOC_Image2MapIndirect* image2map_pipe, Mat cv_map, VideoCapture* cap)
 {
+    int count = 0;
+
     while (1)
     {
         Mat frame;
         {
             std::lock_guard<std::mutex> lock(cap_lock);
             cap->read(frame);
+            //rotate(frame, frame, ROTATE_180);
             if (frame.empty()) {
                 return 0;
             }
@@ -75,10 +79,11 @@ int indirectMatchAndShow(IMGRGLOC_Image2MapIndirect* image2map_pipe, Mat cv_map,
         bool match_success;
 
         IMGRGLOC_Image2MapIndirect_do_match_image2map(image2map_pipe, &match_success);
-
+        count++;
         Mat cv_map_show = cv_map.clone();
         if (match_success)
         {
+            cout << count << endl;
             IMGRGLOC_Image2MapIndirect_get_map_region_wrt_image(image2map_pipe, _image_map_polygon);
             IMGRGLOC_Image2MapIndirect_get_map_region_wrt_map(image2map_pipe, _map_map_polygon);
 
@@ -120,6 +125,7 @@ int indirectMatchAndShow(IMGRGLOC_Image2MapIndirect* image2map_pipe, Mat cv_map,
         }
 
         cv::resize(cv_map_show, cv_map_show, Size(), 0.7, 0.7);
+        cv::resize(cv_image, cv_image, Size(), 0.5, 0.5);
         cv::imshow("map", cv_map_show);
         cv::imshow("image", cv_image);
         if (waitKey(5) >= 0) {
@@ -131,7 +137,7 @@ int indirectMatchAndShow(IMGRGLOC_Image2MapIndirect* image2map_pipe, Mat cv_map,
 
 int main() {
     string map_file = "E:/projects/MapMatching/data/map_lq/map.jpg";
-    string video_file = "E:/projects/MapMatching/data/map_lq/test_imgs/video.mp4";
+    string video_file = "E:/projects/MapMatching/data/map_lq/test_imgs/video4.mp4";
     Mat cv_map = imread(map_file, IMREAD_COLOR);
     //resize(cv_map, cv_map, Size(), 0.8, 0.8);
 

@@ -1,0 +1,10 @@
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/IMGRGLOC_Image2Map.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/IMGRGLOC_Image2MapIndirect.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/IMGRGLOC_Test.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCTypes.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCCore.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCImgCodecs.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCImgProc.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCObjectDetect.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCPhoto.obj
+E:/projects/ImageRegionLocalization/dev/linzhi/bindings/c/imgregionloc_c.dir/RelWithDebInfo/CVCStitching.obj

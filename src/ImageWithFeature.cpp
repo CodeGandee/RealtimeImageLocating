@@ -41,6 +41,10 @@ namespace imgregionloc {
 		feature_point_list = m_feature_point_list;
 
 	}
+	FeaturePointListPtr ImageWithFeature::get_feature_point_list() const
+	{
+		return m_feature_point_list;
+	}
 	void ImageWithFeature::set_matched(bool flag)
 	{
 		m_matched = flag;

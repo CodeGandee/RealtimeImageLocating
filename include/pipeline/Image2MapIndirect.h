@@ -75,12 +75,15 @@ namespace pipeline{
         void do_ref_image_keypoint_detection();
         void do_ref_image_feature_extraction();
         bool is_ref_image2query_ready() const;
+        bool is_ref_image2query_ready();
         bool is_ref_image2map_ready() const; 
+        bool is_ref_image2map_ready(); 
 
         void set_query_image(const cv::Mat& img);
         void do_query_image_keypoint_detection();
         void do_query_image_feature_extraction();
         bool is_query_image_ready() const; //true if we have a query image and it it preprocessed
+        bool is_query_image_ready(); //true if we have a query image and it it preprocessed
         void clear_query_image();
 
         bool do_match_image2map();  //return true if success
@@ -88,17 +91,24 @@ namespace pipeline{
 
         //get results
         float get_match_confidence() const;   //-1 = unsuccessful
+        float get_match_confidence(); 
         cv::Mat get_transform_matrix() const;
+        cv::Mat get_transform_matrix();
         void get_matched_points_in_map(PointList2& out) const;
         //int get_num_matched_points_in_map() const;
         void get_matched_points_in_image(PointList2& out) const;
+        void get_matched_points_in_image(PointList2& out);
         //int get_num_matched_points_in_image() const;
 
         //transformation
         Point2 transform_point_image2map(const Point2& p) const;
+        Point2 transform_point_image2map(const Point2& p);
         void transform_point_image2map(const std::vector<Point2>& pts, std::vector<Point2>& out) const;
+        void transform_point_image2map(const std::vector<Point2>& pts, std::vector<Point2>& out);
         Point2 transform_point_map2image(const Point2& p) const;
+        Point2 transform_point_map2image(const Point2& p);
         void transform_point_map2image(const std::vector<Point2>& pts, std::vector<Point2>& out) const;
+        void transform_point_map2image(const std::vector<Point2>& pts, std::vector<Point2>& out);
 
         //out = the transformed image
         //upper_left_point = the [out] image's upper left point in map coordinate
